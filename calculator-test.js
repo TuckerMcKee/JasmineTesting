@@ -1,6 +1,11 @@
 
 it('should calculate the monthly rate correctly', function () {
-  expect(calculateMonthlyPayment(getCurrentUIValues())).toEqual("665.87");
+  const values = {
+    "amount" : "50000",
+    "years" : "15",
+    "rate" : ".14"
+  }
+  expect(calculateMonthlyPayment(values)).toEqual("665.87");
 });
 //I'm getting the following error: 
 //TypeError: Cannot read properties of null (reading 'value')
